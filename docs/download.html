@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ryu64 - Download</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    </head>
+    <body>
+        <nav class="z-depth-1">
+            <div class="nav-wrapper blue">
+                <a href="#" class="brand-logo center">Ryu64</a>
+                <ul id="nav-mobile" class="left">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="#">Download</a></li>
+                    <li><a href="contribute.html">Contribute</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container center">
+            <h3>Get Pre-Compiled builds on Appveyor</h3>
+            <a href="https://ci.appveyor.com/project/Dudejoe870/ryu64"><img src="https://ci.appveyor.com/api/projects/status/u8ddw82tqa1gxq3i?svg=true" width="128px"></a>
+            <h5>Warning: These builds could be outdated compared to other branches, it is recommended to build your own at this point in time!</h5>
+            <h3>Build your own</h3>
+            <h4>Dependencies</h4>
+            <h5>To build you need <a href="https://dotnet.microsoft.com/download">.NET</a></h5>
+            <h5>To clone the repository you need git, on Linux it should be as easy as using your package manager to install it, or it could already be installed, for Windows however you will need <a href="https://git-scm.com/download/win">Git for Windows</a>. (Make sure that "Git from the command line and also from 3rd party software" is checked in the setup)</h5>
+            <h4>Commands</h4>
+            <h5>To clone the master branch (from the directory you want to be the root Git directory):</h5>
+            <h5>
+                <code>
+                    git clone --recursive https://github.com/Ryu64Emulator/Ryu64.git ./
+                </code>
+            </h5>
+            <h5>To run the master branch (from the root Git directory):</h5>
+            <h5>
+                <code>
+                    dotnet build -c Release
+                    <br>
+                    cd Ryu64
+                    <br>
+                    dotnet run -c Release -- "path/to/rom.z64"
+                </code>
+            </h5>
+            <h5>To run feature branch in GUI mode (from the root Git directory):</h5>
+            <h5>
+                <code>
+                    dotnet build -c Release
+                    <br>
+                    cd Ryu64.GUI
+                    <br>
+                    dotnet run -c Release
+                </code>
+            </h5>
+            <h5>To run feature branch in CLI mode (from the root Git directory):</h5>
+            <h5>
+                <code>
+                    dotnet build -c Release
+                    <br>
+                    cd Ryu64.CLI
+                    <br>
+                    dotnet run -c Release -- [options] "path/to/rom.z64"
+                </code>
+            </h5>
+        </div>
+
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
